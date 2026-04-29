@@ -6,11 +6,7 @@ DOI: 10.64898/2026.04.23.720344
 Data Source: Gene expression dataset (n = 572) with associated survival information
 Preprocessing: Log2 normalization and standard scaling were applied to the data
 Survival Classes: Overall survival (OS) time was categorized into four groups:
-0–1 years
-1–3 years
-3–5 years
-
-5 years
+0–1 years,1–3 years,3–5 years and >5 years
 
 Feature Selection: Applied multiple methods including:
 SVC-L1 (Support Vector Classifier with L1 regularization)
@@ -24,7 +20,6 @@ Ensemble models achieved an AUC of 0.95 on test data
 Incorporating clinical features (stage, age, gender) improved performance to AUC = 0.96
 📁 Repository Structure
 📂 1. Biomarkers/
-
 Contains gene sets selected using the SVC-L1 feature selection technique.
 
 📂 Primary_biomarker/
@@ -41,7 +36,6 @@ Usage: These gene sets were evaluated to identify the most robust prognostic bio
 📂 2. Dataset/
 📂 Link/
 Data_link.txt — Contains links to data sources such as TCGA portal and UCSC Xena Browser
-
 Usage: Provides access to raw datasets used for analysis and reproducibility.
 
 📂 3. Scripts/
