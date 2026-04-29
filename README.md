@@ -3,25 +3,28 @@ This repository contains scripts, data references, and results for identifying p
 DOI: 10.64898/2026.04.23.720344
 
 🔍 Overview
-Data Source: Gene expression dataset (n = 572) with associated survival information
-Preprocessing: Log2 normalization and standard scaling were applied to the data
-Survival Classes: Overall survival (OS) time was categorized into four groups:
-0–1 years,1–3 years,3–5 years and >5 years
+Data Source:
+Gene expression dataset (n = 572) with associated survival information
+Preprocessing:
+Log2 normalization and standard scaling were applied to the data
+Survival Classes:
+Overall survival (OS) time was categorized into four groups:
+0–1 years,1–3 years,3–5 years, and >5 years
 
-Feature Selection: Applied multiple methods including:
-SVC-L1 (Support Vector Classifier with L1 regularization)
-RFE (Recursive Feature Elimination)
-SelectKBest
-Class Imbalance Handling: SMOTE was used to balance survival classes
-Modeling: Built and evaluated multiple machine learning and ensemble models for survival classification
+Feature Selection:
+Applied multiple methods, including:
+SVC-L1 (Support Vector Classifier with L1 regularization), RFE (Recursive Feature Elimination), SelectKBest
+Class Imbalance Handling:
+SMOTE was used to balance survival classes
+Modeling:
+Built and evaluated multiple machine learning and ensemble models for survival classification
 Performance:
 Biomarker-based models achieved AUC values ranging from 0.91 to 0.94
 Ensemble models achieved an AUC of 0.95 on test data
 Incorporating clinical features (stage, age, gender) improved performance to AUC = 0.96
 📁 Repository Structure
 📂 1. Biomarkers/
-Contains gene sets selected using the SVC-L1 feature selection technique.
-
+Contains gene sets selected using the SVC-L1 feature selection technique
 📂 Primary_biomarker/
 List_1st_set.txt — First set of 20 genes
 List_2nd_set.txt — Second set of 20 genes
@@ -31,26 +34,30 @@ List_5th_set.txt — Fifth set of 20 genes
 List_6th_set.txt — Sixth set of 20 genes
 List_7th_set.txt — Seventh set of 20 genes
 
-Usage: These gene sets were evaluated to identify the most robust prognostic biomarkers.
+Usage:
+Used to evaluate and identify the most robust prognostic gene signatures.
 
 📂 2. Dataset/
 📂 Link/
 Data_link.txt — Contains links to data sources such as TCGA portal and UCSC Xena Browser
-Usage: Provides access to raw datasets used for analysis and reproducibility.
+
+Usage:
+Provides access to raw datasets for reproducibility and reference.
 
 📂 3. Scripts/
 thyroid_cancer_preprocessing.py
-Performs preprocessing steps including removal of features with >50% zero values, low variance filtering, and normalization.
-Usage: Generates a clean and normalized dataset for downstream analysis.
+Removes features with >50% zero values, then applies low variance filtering, and performs normalization
+Usage: Generates a clean and normalized dataset for downstream analysis
 feature_selection_ML.py
-Applies SVC-L1 for feature selection, identifies top 20 genes, builds machine learning models, and evaluates performance.
-Usage: Core pipeline for biomarker selection and model development.
+Applies SVC-L1 for feature selection, then selects the top 20 genes based on ranking, after that Builds machine learning models
+Evaluates model performance
+Usage: Core pipeline for biomarker selection and model development
 ml_clinical_1st_20.py
-Performs preprocessing, integrates clinical features, applies machine learning models, and evaluates performance.
-Usage: Used to assess the impact of clinical features on model performance.
-
+Performs preprocessing, then Integrates clinical features and Applies machine learning models
+Evaluates performance
+Usage: Used to assess the impact of clinical features on model performance
 📊 TCGA THCA Dataset Description
-Data from The Cancer Genome Atlas Thyroid Carcinoma (THCA) cohort was used in this study.
+Data from The Cancer Genome Atlas Thyroid Carcinoma (THCA) cohort were used in this study.
 
 📁 THCA_Dataset_ALL/
 This folder contains all processed datasets used for analysis, feature selection, and machine learning modeling.
