@@ -1,7 +1,7 @@
-🧬 Integrative Bioinformatics Approach for Identifying Prognostic Gene Sets in Thyroid Carcinoma Risk Stratification
+# Integrative Bioinformatics Approach for Identifying Prognostic Gene Sets in Thyroid Carcinoma Risk Stratification
 This repository contains scripts, data references, and results for identifying prognostic gene sets in thyroid carcinoma (THCA) using machine learning and statistical analysis.
 DOI: 10.64898/2026.04.23.720344
-
+## Zenodo https://doi.org/10.5281/zenodo.19884114
 🔍 Overview
 Data Source:
 Gene expression dataset (n = 572) with associated survival information
